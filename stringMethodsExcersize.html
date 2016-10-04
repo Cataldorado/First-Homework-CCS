@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <!--find a string length-->
+
+    <p>How many characters are in the word "Supercalifragulousexpedalidocious"?</p>
+    <button onclick="stringcountFunction()">Try it</button>
+    <div id="stringCount"></div>
+    <script>
+        function stringcountFunction() {
+            var countLetters = "Supercalifragulousexpedalidocious";
+            document.getElementById("stringCount").innerHTML = countLetters.length;
+        }
+    </script>
+
+    <!--find string within a string-->
+    <div id="divOne">
+        <p>Find the index of 'example' in this string</p>
+
+        <button onclick="indexofFunction()">Try it</button>
+
+        <p id="output"></p>
+
+        <script>
+            function indexofFunction() {
+                var str = document.getElementById("divOne").innerHTML;
+                var pos = str.indexOf("example");
+                document.getElementById("output").innerHTML = pos;
+            }
+        </script>
+
+        <!--How can I check whether a string ends with specified string/characters?-->
+
+
+        <p>Click the button to check where if the string ends with the specified value.</p>
+
+        <button onclick="endswithFunction()">Try it</button>
+
+        <p id="endWith"></p>
+
+        <script>
+            function endswithFunction() {
+                var str = "Do you know if this string ends with something specific.";
+                var n = str.endsWith("specific.");
+                document.getElementById("endWith").innerHTML = n;
+            }
+        </script>
+
+        <!--How can I check whether a string contains a specified string or set of characters?-->
+
+        <p>Click the button to check where if the string includes the specified value.</p>
+
+        <button onclick="includesFunction()">Try it</button>
+
+        <p id="includes"></p>
+
+        <script>
+            function includesFunction() {
+                var str = "Does this string include the word javascript?.";
+                var n = str.includes("javascript");
+                document.getElementById("includes").innerHTML = n;
+            }
+        </script>
+
+        <!--How can I Compares two strings?-->
+
+        <p>Click the button to compare the two strings in the current locale.</p>
+
+        <button onclick="compareFunction()">Try it</button>
+
+        <p id="compareIt"></p>
+
+        <script>
+            function compareFunction() {
+                var str1 = "a";
+                var str2 = "b";
+                var n = str1.localeCompare(str2);
+                document.getElementById("compareIt").innerHTML = n;
+            }
+        </script>
+
+        <!--How can I check whether a string begins with a specified character(s)?-->
+
+        <p>Click the button to check where if the string starts with the specified value.</p>
+
+        <button onclick="startswithFunction()">Try it</button>
+
+        <p id="startsWith"></p>
+
+        <script>
+            function startswithFunction() {
+                var str = "Does this string start with Does?.";
+                var n = str.startsWith("Does");
+                document.getElementById("startsWith").innerHTML = n;
+            }
+        </script>
+
+        <!--How can I convert a string to all uppercase letters?-->
+
+        <p>Click the button to convert the string to uppercase letters.</p>
+
+        <button onclick="capitalFunction()">Try it</button>
+
+        <p id="capital"></p>
+
+        <script>
+            function capitalFunction() {
+                var str = "Hello World!";
+                var res = str.toUpperCase();
+                document.getElementById("capital").innerHTML = res;
+            }
+        </script>
+
+        <!--How can I convert the first letter of ever word to uppercase?-->
+
+        <p>Convert 1st letter of every word to uppercase</p>
+
+        <button onclick="capitalFirst()">Try it</button>
+        <br>
+        <div id="show">
+            <br>
+        </div>
+
+        <script>
+            function capitalFirst() {
+                var str = "capitalize the first letters in this sentence";
+                var res = (str.replace(/(^|\s)[a-z]/g, function (f) {
+                    return f.toUpperCase();
+                }));
+                document.getElementById("show").innerHTML = res;
+
+            }
+        </script>
+        <!--How can I remove whitespace from either ends of a string?-->
+
+        <p>Click the button to alert the string with removed whitespace.</p>
+
+        <button onclick="removeWhiteSpaceFunction()">Try it</button>
+
+        <div id="remove"></div>
+
+
+        <script>
+            function removeWhiteSpaceFunction() {
+                var str = "       Bye Bye White Space!       ";
+                var res = (str.trim());
+                document.getElementById("remove").innerHTML = res;
+            }
+        </script>
+        
+<!--How do I create a random number between 1 and 10?-->
+        
+<p>Click the button to display a random number between 1 and 10.</p>
+
+<button onclick="randomFunction()">Try it</button>
+
+<p id="numberRandom"></p>
+
+<script>
+function randomFunction() {
+    var x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("numberRandom").innerHTML = x;
+}
+</script>
+        
+<!--How do I find the lowest or highest value in a list of arguments ?-->
+
+<p>Click the button to return the highest number of 48 and 10.</p>
+
+<button onclick="highestFunction()">Try it</button>
+
+<p id="highest"></p>
+
+<script>
+function highestFunction() {
+    document.getElementById("highest").innerHTML = Math.max(48, 10);
+}
+</script>
+        
+<p>Click the button to return the highest number of 48 and 10.</p>
+
+<button onclick="lowestFunction()">Try it</button>
+
+<p id="lowest"></p>
+
+<script>
+function lowestFunction() {
+    document.getElementById("lowest").innerHTML = Math.min(48, 10);
+}
+</script>
+
+<!--        How do I round a number up to the nearest integer?-->
+        
+<p>Click the button to round the number 9.5 up to its nearest integer.</p>
+
+<button onclick="roundFunction()">Try it</button>
+
+<p id="round"></p>
+
+<script>
+function roundFunction() {
+    document.getElementById("round").innerHTML = Math.round(9.5);
+}
+</script>
+        
+<!--How do I round a number down to the nearest integer ?-->
+
+        <p>Click the button to round the number 9.5 down to its nearest integer.</p>
+
+<button onclick="rounddownFunction()">Try it</button>
+
+<p id="rounddown"></p>
+
+<script>
+function rounddownFunction() {
+    document.getElementById("rounddown").innerHTML = Math.floor(9.5);
+}
+</script>
+        
+<!--How do I add 3 numbers together?-->
+        
+<p>Add three numbers together</p>
+
+<button onclick="addThree()">Try it</button>
+<p id="demo"></p>
+
+<script>
+    
+function addThree(){
+var x = 5;
+var y = 2;
+var xy = 7;
+var z = x + y + xy;
+document.getElementById("demo").innerHTML = z;
+}
+</script>
+        
+<!--How do I add 3 numbers together then divide by 7 ?-->
+        
+<p>Add three numbers together then divide by 7</p>
+
+<button onclick="addThreeDivide()">Try it</button>
+<p id="divide"></p>
+
+<script>
+    
+function addThreeDivide(){
+var ab = 5;
+var cd = 2;
+var ef = 7;
+var gh = ab + cd + ef;
+document.getElementById("divide").innerHTML = gh / 7;
+}
+</script>
+        
+<!--How do I convert a string like '4' to an integer?-->
+        
+
+<p>Click the button to convert '4' to 4.</p>
+
+<button onclick="convertFunction()">Try it</button>
+
+<p id="convert"></p>
+
+<script>
+function convertFunction() {
+    var a = parseInt("4");
+
+    var n = a;
+    document.getElementById("convert").innerHTML = n;
+}
+</script>
+        
+<!--How do I convert a string like '4.8' to a float?-->
+        
+
+<p>Click the button to convert '4.8' to a float.</p>
+
+<button onclick="convertFloatFunction()">Try it</button>
+
+<p id="convertFloat"></p>
+
+<script>
+function convertFloatFunction() {
+    var a = parseFloat("4.8");
+
+    var n = a;
+    document.getElementById("convertFloat").innerHTML = n;
+}
+</script>
+        
+<!--How do I increment a number by 1?-->
+        
+<p>Increment a number by 1.</p>
+
+<button onclick="incrementFunction()">Try it</button>
+
+<p id="increment"></p>
+        
+<script>
+
+    function incrementFunction(){
+        var x = 1;
+        x++;
+        var y = x;
+        
+        document.getElementById("increment").innerHTML = y;
+        
+    }
+        
+</script>
+
+<!--Start calculator-->
+        
+<h3>Simple Calculator</h3>
+<br/>
+<form Name="calc">
+<table border=2>
+<tr>
+<td colspan=4><input type=text Name="display"></td>
+</tr>
+<tr>
+<td><input type=button value="0" OnClick="calc.display.value+='0'"></td>
+<td><input type=button value="1" OnClick="calc.display.value+='1'"></td>
+<td><input type=button value="2" OnClick="calc.display.value+='2'"></td>
+<td><input type=button value="+" OnClick="calc.display.value+='+'"></td>
+</tr>
+<tr>
+<td><input type=button value="3" OnClick="calc.display.value+='3'"></td>
+<td><input type=button value="4" OnClick="calc.display.value+='4'"></td>
+<td><input type=button value="5" OnClick="calc.display.value+='5'"></td>
+<td><input type=button value="-" OnClick="calc.display.value+='-'"></td>
+</tr>
+<tr>
+<td><input type=button value="6" OnClick="calc.display.value+='6'"></td>
+<td><input type=button value="7" OnClick="calc.display.value+='7'"></td>
+<td><input type=button value="8" OnClick="calc.display.value+='8'"></td>
+<td><input type=button value="x" OnClick="calc.display.value+='*'"></td>
+</tr>
+<tr>
+<td><input type=button value="9" OnClick="calc.display.value+='9'"></td>
+<td><input type=button value="C" OnClick="calc.display.value=''"></td>
+<td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
+<td><input type=button value="/" OnClick="calc.display.value+='/'"></td>
+</tr>
+</table>
+</form>
+
+        
+    
+
+</body>
+
+</html>
